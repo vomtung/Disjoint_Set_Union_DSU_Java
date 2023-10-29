@@ -14,6 +14,8 @@ public class HelloController {
 
     private UF dus;
 
+    private List<String> originList;
+
     @FXML
     private Label welcomeText;
 
@@ -29,9 +31,9 @@ public class HelloController {
 
         String input = inputTA.getText();
 
-        List<String> myList = new ArrayList<String>(Arrays.asList(input.split(" ")));
+        originList = new ArrayList<String>(Arrays.asList(input.split(" ")));
 
-        this.dus = new UF(myList);
+        this.dus = new UF(originList);
         outPutTA.setText(Arrays.toString(dus.getParent()));
     }
 
@@ -43,8 +45,11 @@ public class HelloController {
 
         List<String> myList = new ArrayList<String>(Arrays.asList(input.split(" ")));
 
-        Node fResult = dus.find(Integer.valueOf(myList.get(0)));
-        Node sResult = dus.find(Integer.valueOf(myList.get(1)));
+        int firstIndex = originList.indexOf(myList.get(0));
+        int secondIndex = originList.indexOf(myList.get(1));
+
+        Node fResult = dus.find(firstIndex);
+        Node sResult = dus.find(secondIndex);
 
         outPutTA.setText((fResult == sResult) + "");
     }
@@ -57,7 +62,10 @@ public class HelloController {
 
         List<String> myList = new ArrayList<String>(Arrays.asList(input.split(" ")));
 
-        dus.union(Integer.parseInt(myList.get(0)), Integer.parseInt(myList.get(1)));
+        int firstIndex = originList.indexOf(myList.get(0));
+        int secondIndex = originList.indexOf(myList.get(1));
+
+        dus.union(firstIndex, secondIndex);
         outPutTA.setText(Arrays.toString(dus.getParent()));
     }
 }
