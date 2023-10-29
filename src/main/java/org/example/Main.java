@@ -7,8 +7,8 @@ public class Main {
         // Let there be 5 persons with ids as
         // 0, 1, 2, 3 and 4
         int n = 5;
-        DisjointUnionSets dus =
-                new DisjointUnionSets(n);
+        UF dus =
+                new UF(n);
 
         // 0 is a friend of 2
         dus.union(0, 2);

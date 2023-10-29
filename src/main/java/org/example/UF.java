@@ -1,11 +1,11 @@
 package org.example;
 
-public class DisjointUnionSets {
+public class UF {
     int[] rank, parent;
     int n;
 
     // Constructor
-    public DisjointUnionSets(int n)
+    public UF(int n)
     {
         rank = new int[n];
         parent = new int[n];
