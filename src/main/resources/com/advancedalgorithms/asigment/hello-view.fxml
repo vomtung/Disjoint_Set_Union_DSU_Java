@@ -16,6 +16,6 @@
     <TextArea fx:id="inputTA" maxHeight="20"/>
     <Button text="Init value!" onAction="#onHelloButtonClick"/>
     <Button text="Union!" onAction="#onUnionButtonClick"/>
-    <Button text="Find!" onAction="#onFindButtonClick"/>
-    <TextArea fx:id="outPutTA" maxHeight="20"/>
+    <Button text="Same Tree!" onAction="#onSameTreeButtonClick"/>
+    <TextArea fx:id="outPutTA" maxHeight="50"/>
 </VBox>

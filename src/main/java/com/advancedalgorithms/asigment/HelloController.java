@@ -36,15 +36,17 @@ public class HelloController {
     }
 
     @FXML
-    protected void onFindButtonClick() {
-        welcomeText.setText("Call Find Method!. Input: " + inputTA.getText());
+    protected void onSameTreeButtonClick() {
+        welcomeText.setText("Call SameTree Method!. Input: " + inputTA.getText());
 
         String input = inputTA.getText();
 
         List<String> myList = new ArrayList<String>(Arrays.asList(input.split(" ")));
 
-        Node result = dus.find(Integer.valueOf(0));
-        outPutTA.setText(result.toString());
+        Node fResult = dus.find(Integer.valueOf(myList.get(0)));
+        Node sResult = dus.find(Integer.valueOf(myList.get(1)));
+
+        outPutTA.setText((fResult == sResult) + "");
     }
 
     @FXML
@@ -55,7 +57,7 @@ public class HelloController {
 
         List<String> myList = new ArrayList<String>(Arrays.asList(input.split(" ")));
 
-        dus.union(0, 1);
+        dus.union(Integer.parseInt(myList.get(0)), Integer.parseInt(myList.get(1)));
         outPutTA.setText(Arrays.toString(dus.getParent()));
     }
 }
