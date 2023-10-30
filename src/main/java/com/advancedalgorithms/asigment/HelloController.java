@@ -53,6 +53,9 @@ public class HelloController {
     @FXML
     protected void onSameTreeButtonClick() {
 
+
+        ZonedDateTime beginDT = ZonedDateTime.now();
+
         String input = inputTA.getText();
 
         List<String> myList = new ArrayList<String>(Arrays.asList(input.split(" ")));
@@ -66,10 +69,17 @@ public class HelloController {
         welcomeText.setText("Check SameTree. Input: " + inputTA.getText());
 
         outPutTA.setText((fResult == sResult) + "");
+
+        ZonedDateTime endDT = ZonedDateTime.now();
+
+        Double duration = (Double.valueOf(endDT.getNano()) - beginDT.getNano())/1000000;
+        speedvalueLabel.setText(String.valueOf(duration));
     }
 
     @FXML
     protected void onUnionButtonClick() {
+
+        ZonedDateTime beginDT = ZonedDateTime.now();
 
         String input = inputTA.getText();
 
@@ -84,5 +94,10 @@ public class HelloController {
 
         dus.union(firstIndex, secondIndex);
         outPutTA.setText(Arrays.toString(dus.getParent()));
+
+        ZonedDateTime endDT = ZonedDateTime.now();
+
+        Double duration = (Double.valueOf(endDT.getNano()) - beginDT.getNano())/1000000;
+        speedvalueLabel.setText(String.valueOf(duration));
     }
 }
