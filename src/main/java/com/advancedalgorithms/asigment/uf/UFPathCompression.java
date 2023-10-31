@@ -33,14 +33,18 @@ public class UFPathCompression {
         // Finds the representative of the set
         // that x is an element of
         if (parent[x].getId() != x) {
-            // if x is not the parent of itself
-            // Then x is not the representative of
-            // his set,
-            parent[x] = find(parent[x].getId());
+
+            Node result = find(parent[x].getId());
+
+            // We cache the result by moving i’s node
+            // directly under the representative of this
+            // set
+            parent[x] = result;
 
             // so we recursively call Find on its parent
             // and move i's node directly under the
             // representative of this set
+            return result;
         }
 
         return parent[x];
