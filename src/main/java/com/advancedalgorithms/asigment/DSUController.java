@@ -3,7 +3,6 @@ package com.advancedalgorithms.asigment;
 import com.advancedalgorithms.asigment.uf.Node;
 import com.advancedalgorithms.asigment.uf.UF;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 
@@ -12,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class HelloController {
+public class DSUController {
 
     private UF dus;
 
