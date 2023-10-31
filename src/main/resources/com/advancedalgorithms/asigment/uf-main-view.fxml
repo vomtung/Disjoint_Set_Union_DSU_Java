@@ -19,7 +19,8 @@
         <Tab fx:id="ufTab" text="Disjoint Set Union">
             <fx:include source="disjoint-set-union.fxml"/>
         </Tab>
-        <Tab fx:id="barTab" text="Path Compression Optimization">
+        <Tab fx:id="pathCompressionTab" text="Path Compression Optimization">
+            <fx:include source="path-compression-optimization.fxml"/>
         </Tab>
     </tabs>
     </TabPane>
