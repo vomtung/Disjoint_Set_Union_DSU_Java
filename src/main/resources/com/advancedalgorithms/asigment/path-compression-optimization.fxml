@@ -6,9 +6,55 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.geometry.Insets?>
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.advancedalgorithms.asigment.PathCompressionOptimization"
-            prefHeight="400.0" prefWidth="600.0">
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.advancedalgorithms.asigment.PathCompressionOptimizationController"
+      prefHeight="400.0" prefWidth="600.0">
 
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label fx:id="welcomeText" style="-fx-text-fill: red;-fx-font-size: 16px;" text="Welcome to JavaFX Application!"/>
+
+    <TextArea fx:id="inputTA" maxHeight="20"/>
+    <HBox>
+        <Button text="Init value!" onAction="#onHelloButtonClick">
+            <HBox.margin>
+                <Insets>
+                    <right>10</right>
+                </Insets>
+            </HBox.margin>
+        </Button>
+        <Button text="Union!" onAction="#onUnionButtonClick">
+            <HBox.margin>
+                <Insets>
+                    <right>10</right>
+                </Insets>
+            </HBox.margin>
+        </Button>
+        <Button text="Same Tree!" onAction="#onSameTreeButtonClick"/>
+    </HBox>
+
+    <TextArea fx:id="outPutTA" maxHeight="50"/>
+    <HBox>
+        <Label fx:id="speedLabel" style="-fx-text-fill: green;-fx-font-size: 24px;" text="Speed">
+            <HBox.margin>
+                <Insets>
+                    <right>10</right>
+                </Insets>
+            </HBox.margin>
+        </Label>
+        <Label fx:id="speedvalueLabel" style="-fx-text-fill: red;-fx-font-size: 24px;" text="0">
+            <HBox.margin>
+                <Insets>
+                    <right>10</right>
+                </Insets>
+            </HBox.margin>
+        </Label>
+        <Label fx:id="secondLabel" style="-fx-text-fill: green;-fx-font-size: 24px;" text="Millisecond">
+
+        </Label>
+    </HBox>
 </VBox>
