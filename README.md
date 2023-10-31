@@ -10,12 +10,14 @@ we have parent array
 
 # before press Init Value
 we have parent array
+
 |(0)alice |(1)bob |(2)cindy |(3)daniel|(4)emma |(5)fiona|(6)grey |(7)hudson |(8)ian |(9)jacob|
 
 |(0)alice |(1)bob |(2)cindy |(3)daniel|(4)emma |(5)fiona|(6)grey |(7)hudson |(8)ian |(9)jacob|
 
 # after press Union "alice" and "bob"
 we have parent array
+
 |(0)alice     |(1)bob       |(2)cindy |(3)daniel|(4)emma  |(5)fiona |(6)grey |(7)hudson |(8)ian |(9)jacob|
 
 |**(0)alice** |**(0)alice** |(2)cindy |(3)daniel|(4)emma |(5)fiona|(6)grey |(7)hudson |(8)ian |(9)jacob|
@@ -23,6 +25,7 @@ we have parent array
 
 # after press Union "ian" and "cindy"
 we have parent array
+
 |(0)alice     |(1)bob       |(2)cindy     |(3)daniel|(4)emma  |(5)fiona|(6)grey |(7)hudson |(8)ian        |(9)jacob|
 
 |(0)alice     |(0)alice     |**(2)cindy** |(3)daniel|(4)emma  |(5)fiona|(6)grey |(7)hudson |**(2)cindy**  |(9)jacob|
