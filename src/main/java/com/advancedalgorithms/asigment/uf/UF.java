@@ -33,17 +33,13 @@ public class UF {
         // Finds the representative of the set
         // that x is an element of
         if (parent[x].getId() != x) {
-            // if x is not the parent of itself
-            // Then x is not the representative of
-            // his set,
-            parent[x] = find(parent[x].getId());
-
-            // so we recursively call Find on its parent
-            // and move i's node directly under the
-            // representative of this set
+            // Else if i is not the parent of
+            // itself, then i is not the
+            // representative of his set. So we
+            // recursively call Find on its parent
         }
 
-        return parent[x];
+        return find(parent[x].getId());
     }
 
     // Unites the set that includes x and the set
