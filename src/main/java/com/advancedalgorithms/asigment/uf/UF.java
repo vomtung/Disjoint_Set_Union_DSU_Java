@@ -37,9 +37,11 @@ public class UF {
             // itself, then i is not the
             // representative of his set. So we
             // recursively call Find on its parent
+
+            return find(parent[x].getId());
         }
 
-        return find(parent[x].getId());
+        return parent[x];
     }
 
     // Unites the set that includes x and the set
