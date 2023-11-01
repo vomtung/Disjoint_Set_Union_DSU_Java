@@ -28,8 +28,8 @@ public class UF {
     // Returns representative of x's set
     public Node find(int x)
     {
-        System.out.println("==find x:" + x);
-        System.out.println("==parent[x].getId():" + parent[x].getId());
+        //System.out.println("==find x:" + x);
+        //System.out.println("==parent[x].getId():" + parent[x].getId());
         // Finds the representative of the set
         // that x is an element of
         if (parent[x].getId() != x) {
@@ -52,8 +52,8 @@ public class UF {
         Node xRoot = find(x);
         Node yRoot = find(y);
 
-        System.out.println("xxRoot:" + xRoot);
-        System.out.println("yxRoot:" + yRoot);
+        //System.out.println("xxRoot:" + xRoot);
+        //System.out.println("yxRoot:" + yRoot);
 
         // Elements are in the same set, no need
         // to unite anything.
