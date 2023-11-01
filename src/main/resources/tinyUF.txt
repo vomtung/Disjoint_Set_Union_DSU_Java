@@ -1,12 +1,13 @@
-10
-4 3
-3 8
-6 5
-9 4
-2 1
-8 9
-5 0
-7 2
-6 1
-1 0
-6 7
+# Disjoint_Set_Union_DSU_Java
+
+alice bob cindy daniel emma fiona grey hudson ian jacob
+
+
+reference
+
+https://cp-algorithms.com/data_structures/disjoint_set_union.html
+
+https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/
+
+https://www.geeksforgeeks.org/introduction-to-disjoint-set-data-structure-or-union-find-algorithm/
+https://algs4.cs.princeton.edu/15uf/QuickUnionPathHalvingUF.java.html
