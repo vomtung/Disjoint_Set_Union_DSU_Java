@@ -2,7 +2,7 @@ package com.advancedalgorithms.asigment;
 
 import com.advancedalgorithms.asigment.uf.Node;
 import com.advancedalgorithms.asigment.uf.UF;
-import com.advancedalgorithms.asigment.uf.UFPathCompression;
+import com.advancedalgorithms.asigment.uf.UFPathHalving;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -12,9 +12,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PathCompressionOptimizationController {
+public class PathHalvingOptimizationController {
 
-    private UFPathCompression dus;
+    private UFPathHalving dus;
 
     private List<String> originList;
 
@@ -41,7 +41,7 @@ public class PathCompressionOptimizationController {
 
         originList = new ArrayList<>(Arrays.asList(input.split(" ")));
 
-        this.dus = new UFPathCompression(originList);
+        this.dus = new UFPathHalving(originList);
         outPutTA.setText(Arrays.toString(dus.getParent()));
 
         ZonedDateTime endDT = ZonedDateTime.now();

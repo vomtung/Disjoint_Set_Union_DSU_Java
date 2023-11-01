@@ -1,34 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TextArea?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.control.Tab?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.advancedalgorithms.asigment.DSUController">
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.advancedalgorithms.asigment.PathHalvingOptimizationController"
+      prefHeight="400.0" prefWidth="600.0">
+
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
-    <TabPane fx:id="tabPane" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" >
-    <tabs>
-        <Tab fx:id="ufTab" text="Disjoint Set Union">
-            <fx:include source="disjoint-set-union.fxml"/>
-        </Tab>
-        <Tab fx:id="pathCompressionTab" text="Path Compression Optimization">
-            <fx:include source="path-compression-optimization.fxml"/>
-        </Tab>
-        <Tab fx:id="pathHalvingTab" text="Path halving Optimization">
-            <fx:include source="path-halving-optimization.fxml"/>
-        </Tab>
-    </tabs>
-    </TabPane>
-    <!--
-    <Label fx:id="welcomeText" style="-fx-text-fill: red;-fx-font-size: 16px;" text="Welcome to JavaFX Application!"/>
+
+    <Label fx:id="welcomeText" style="-fx-text-fill: red;-fx-font-size: 16px;" text="Path Halving Optimization"/>
 
     <TextArea fx:id="inputTA" maxHeight="20"/>
     <HBox>
@@ -69,7 +57,4 @@
 
         </Label>
     </HBox>
-    -->
-
-
 </VBox>
