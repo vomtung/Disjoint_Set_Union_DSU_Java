@@ -25,51 +25,12 @@
         <Tab fx:id="pathHalvingTab" text="Path halving Optimization">
             <fx:include source="path-halving-optimization.fxml"/>
         </Tab>
+        <Tab fx:id="chartVisualizeTab" text="Chart Visualize">
+            <fx:include source="chart-visualize.fxml"/>
+        </Tab>
     </tabs>
     </TabPane>
-    <!--
-    <Label fx:id="welcomeText" style="-fx-text-fill: red;-fx-font-size: 16px;" text="Welcome to JavaFX Application!"/>
 
-    <TextArea fx:id="inputTA" maxHeight="20"/>
-    <HBox>
-        <Button text="Init value!" onAction="#onHelloButtonClick">
-            <HBox.margin>
-                <Insets>
-                    <right>10</right>
-                </Insets>
-            </HBox.margin>
-        </Button>
-        <Button text="Union!" onAction="#onUnionButtonClick">
-            <HBox.margin>
-                <Insets>
-                    <right>10</right>
-                </Insets>
-            </HBox.margin>
-        </Button>
-        <Button text="Same Tree!" onAction="#onSameTreeButtonClick"/>
-    </HBox>
-
-    <TextArea fx:id="outPutTA" maxHeight="50"/>
-    <HBox>
-        <Label fx:id="speedLabel" style="-fx-text-fill: green;-fx-font-size: 24px;" text="Speed">
-            <HBox.margin>
-                <Insets>
-                    <right>10</right>
-                </Insets>
-            </HBox.margin>
-        </Label>
-        <Label fx:id="speedvalueLabel" style="-fx-text-fill: red;-fx-font-size: 24px;" text="0">
-            <HBox.margin>
-                <Insets>
-                    <right>10</right>
-                </Insets>
-            </HBox.margin>
-        </Label>
-        <Label fx:id="secondLabel" style="-fx-text-fill: green;-fx-font-size: 24px;" text="Millisecond">
-
-        </Label>
-    </HBox>
-    -->
 
 
 </VBox>
