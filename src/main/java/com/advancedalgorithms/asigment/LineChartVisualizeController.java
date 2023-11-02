@@ -1,27 +1,20 @@
 package com.advancedalgorithms.asigment;
 
-import com.advancedalgorithms.asigment.uf.Node;
 import com.advancedalgorithms.asigment.uf.UF;
 import com.advancedalgorithms.asigment.uf.UFPathCompression;
-import com.advancedalgorithms.asigment.uf.UFPathHalving;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
 import javafx.scene.chart.CategoryAxis;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
 
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class ChartVisualizeController {
+public class LineChartVisualizeController {
 
     private UF uf;
     private UFPathCompression ufPathCompression;
