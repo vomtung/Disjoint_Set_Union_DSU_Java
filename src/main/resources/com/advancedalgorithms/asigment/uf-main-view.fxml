@@ -25,8 +25,11 @@
         <Tab fx:id="pathHalvingTab" text="Path halving Optimization">
             <fx:include source="path-halving-optimization.fxml"/>
         </Tab>
-        <Tab fx:id="chartVisualizeTab" text="Chart Visualize">
-            <fx:include source="chart-visualize.fxml"/>
+        <Tab fx:id="lineChartVisualizeTab" text="Line Chart Visualize">
+            <fx:include source="line-chart-visualize.fxml"/>
+        </Tab>
+        <Tab fx:id="barChartVisualizeTab" text="Bar Chart Visualize">
+            <fx:include source="bar-chart-visualize.fxml"/>
         </Tab>
     </tabs>
     </TabPane>
