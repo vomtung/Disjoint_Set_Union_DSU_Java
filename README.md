@@ -1,4 +1,7 @@
 # Disjoint_Set_Union_DSU_Java
+This is demo assigment of subject "Advance Algorithm" Master Course Fall 2023
+
+Ho Chi Minh City University of Technology
 
 # input
 alice bob cindy daniel emma fiona grey hudson ian jacob
