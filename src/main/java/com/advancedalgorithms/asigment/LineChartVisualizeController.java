@@ -41,8 +41,8 @@ public class LineChartVisualizeController {
 
 
     private void visualizaGrafico(){
-        yAxis.setLabel("Time");
-        xAxis.setLabel("Vertex");
+        yAxis.setLabel("Time(milliseconds)");
+        xAxis.setLabel("Run");
         int verTextNum = 2000;
         int runNum = 5000000;
         List<String>vertexValues = new ArrayList<>();
@@ -68,7 +68,7 @@ public class LineChartVisualizeController {
             System.out.println("endDT.getNano() :" + endDT);
             long duration = ( endDT -  beginDT);
             System.out.println("i:" + i+ " duration:" + duration);
-            series.getData().add(new XYChart.Data(String.valueOf(i), duration));
+            series.getData().add(new XYChart.Data(String.valueOf(i), duration/1000000));
         }
 
         XYChart.Series series2 = new XYChart.Series();
@@ -85,7 +85,7 @@ public class LineChartVisualizeController {
             //System.out.println("endDT.getNano() :" + endDT.getNano());
 
             System.out.println("i:" + i+ " duration:" + duration);
-            series2.getData().add(new XYChart.Data(String.valueOf(i), duration));
+            series2.getData().add(new XYChart.Data(String.valueOf(i), duration/1000000));
         }
 
 
