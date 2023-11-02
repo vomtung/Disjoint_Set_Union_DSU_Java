@@ -15,11 +15,11 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class BarChartVisualizeController {
 
-    private static final Integer RUN_NUMBER_10000 = 10000;
+    private static final Integer RUN_NUMBER_150000 = 150000;
 
-    private static final Integer RUN_NUMBER_15000 = 15000;
+    private static final Integer RUN_NUMBER_200000 = 200000;
 
-    private static final Integer RUN_NUMBER_20000 = 20000;
+    private static final Integer RUN_NUMBER_250000 = 250000;
     private static final Integer VERTEX_NUMBER = 1000;
 
     private static final String UF = "Union Find Origin";
@@ -47,15 +47,15 @@ public class BarChartVisualizeController {
 
         barChart.setAnimated (true);
         xAxis.setCategories(FXCollections.<String>observableArrayList(Arrays.asList(
-                RUN_NUMBER_10000.toString(),RUN_NUMBER_15000.toString(), RUN_NUMBER_20000.toString())));
+                RUN_NUMBER_150000.toString(), RUN_NUMBER_200000.toString(), RUN_NUMBER_250000.toString())));
         visualizaGrafico();
     }
 
 
 
     private void visualizaGrafico(){
-        yAxis.setLabel("Time");
-        xAxis.setLabel("Vertex");
+        yAxis.setLabel("Time(milliseconds)");
+        xAxis.setLabel("Run number");
         List<String>vertexValues = new ArrayList<>();
         for(int i = 0; i < VERTEX_NUMBER; i++){
             vertexValues.add(String.valueOf(i));
@@ -70,7 +70,7 @@ public class BarChartVisualizeController {
 
 
         long originUFHeight =0;
-        for (int i = 0; i < RUN_NUMBER_10000; i ++) {
+        for (int i = 0; i < RUN_NUMBER_150000; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             int firstVertex = ThreadLocalRandom.current().nextInt(0, VERTEX_NUMBER-1 );
@@ -81,10 +81,10 @@ public class BarChartVisualizeController {
             long duration = ( endDT -  beginDT);
             originUFHeight = originUFHeight + duration;
         }
-        series.getData().add(new XYChart.Data(RUN_NUMBER_10000.toString(), originUFHeight/1000000));
+        series.getData().add(new XYChart.Data(RUN_NUMBER_150000.toString(), originUFHeight/1000000));
 
         originUFHeight =0;
-        for (int i = 0; i < RUN_NUMBER_15000; i ++) {
+        for (int i = 0; i < RUN_NUMBER_200000; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             int firstVertex = ThreadLocalRandom.current().nextInt(0, VERTEX_NUMBER-1 );
@@ -95,11 +95,11 @@ public class BarChartVisualizeController {
             long duration = ( endDT -  beginDT);
             originUFHeight = originUFHeight + duration;
         }
-        series.getData().add(new XYChart.Data(RUN_NUMBER_15000.toString(), originUFHeight/1000000));
+        series.getData().add(new XYChart.Data(RUN_NUMBER_200000.toString(), originUFHeight/1000000));
 
 
         originUFHeight =0;
-        for (int i = 0; i < RUN_NUMBER_20000; i ++) {
+        for (int i = 0; i < RUN_NUMBER_250000; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             //System.out.println("beginDT.getNano() :" + beginDT.getNano());
@@ -113,10 +113,10 @@ public class BarChartVisualizeController {
 
             originUFHeight = originUFHeight + duration;
         }
-        series.getData().add(new XYChart.Data(RUN_NUMBER_20000.toString(), originUFHeight/1000000));
+        series.getData().add(new XYChart.Data(RUN_NUMBER_250000.toString(), originUFHeight/1000000));
 
         long pathCompressionUFHeight =0;
-        for (int i = 0; i < RUN_NUMBER_10000; i ++) {
+        for (int i = 0; i < RUN_NUMBER_150000; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             //System.out.println("beginDT.getNano() :" + beginDT.getNano());
@@ -131,10 +131,10 @@ public class BarChartVisualizeController {
             pathCompressionUFHeight = pathCompressionUFHeight + duration;
         }
 
-        series2.getData().add(new XYChart.Data(RUN_NUMBER_10000.toString(), pathCompressionUFHeight/1000000));
+        series2.getData().add(new XYChart.Data(RUN_NUMBER_150000.toString(), pathCompressionUFHeight/1000000));
 
         pathCompressionUFHeight =0;
-        for (int i = 0; i < RUN_NUMBER_15000; i ++) {
+        for (int i = 0; i < RUN_NUMBER_200000; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             //System.out.println("beginDT.getNano() :" + beginDT.getNano());
@@ -148,10 +148,10 @@ public class BarChartVisualizeController {
 
             pathCompressionUFHeight = pathCompressionUFHeight + duration;
         }
-        series2.getData().add(new XYChart.Data(RUN_NUMBER_15000.toString(), pathCompressionUFHeight/1000000));
+        series2.getData().add(new XYChart.Data(RUN_NUMBER_200000.toString(), pathCompressionUFHeight/1000000));
 
         pathCompressionUFHeight =0;
-        for (int i = 0; i < RUN_NUMBER_20000; i ++) {
+        for (int i = 0; i < RUN_NUMBER_250000; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             //System.out.println("beginDT.getNano() :" + beginDT.getNano());
@@ -166,7 +166,7 @@ public class BarChartVisualizeController {
             pathCompressionUFHeight = pathCompressionUFHeight + duration;
         }
 
-        series2.getData().add(new XYChart.Data(RUN_NUMBER_20000.toString(), pathCompressionUFHeight/1000000));
+        series2.getData().add(new XYChart.Data(RUN_NUMBER_250000.toString(), pathCompressionUFHeight/1000000));
 
 
 
