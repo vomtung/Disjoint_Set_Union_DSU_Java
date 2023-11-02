@@ -16,6 +16,8 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class LineChartVisualizeController {
 
+    private static final Integer DRAW_NUM = 1000;
+
     private UF uf;
     private UFPathCompression ufPathCompression;
 
@@ -56,7 +58,7 @@ public class LineChartVisualizeController {
 
         XYChart.Series series = new XYChart.Series();
 
-        for (int i =runNum-200; i < runNum; i ++) {
+        for (int i =runNum-DRAW_NUM; i < runNum; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             System.out.println("beginDT.getNano() :" + beginDT);
@@ -72,7 +74,7 @@ public class LineChartVisualizeController {
         }
 
         XYChart.Series series2 = new XYChart.Series();
-        for (int i  =runNum-200; i < runNum; i ++) {
+        for (int i  =runNum-DRAW_NUM; i < runNum; i ++) {
 
             int beginDT = ZonedDateTime.now().getNano();
             //System.out.println("beginDT.getNano() :" + beginDT.getNano());
